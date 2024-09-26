@@ -1,20 +1,16 @@
 #!/usr/bin/python3
 """
-Flask web application that listens on 0.0.0.0 and port 5000
-Routes:
-/: display "Hello HBNB!"
+starts a Flask web application
 """
 
 from flask import Flask
-
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
-    """Displays 'Hello HBNB!'"""
-    return "Hello HBNB!"
+def index():
+    """returns Hello HBNB!"""
+    return 'Hello HBNB!'
 
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='5000')
